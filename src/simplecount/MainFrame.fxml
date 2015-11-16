@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#handleKeyPressed" prefHeight="373.0" prefWidth="269.0" stylesheets="@../stylesheets/mainSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simplecount.MainFrameController">
+    <children>
+      <VBox layoutX="15.0" layoutY="15.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <MenuBar maxHeight="0.0" prefHeight="0.0" prefWidth="259.0" visible="false" VBox.vgrow="NEVER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="0">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD0" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="1">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD1" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="2">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD2" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="3">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD3" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="4">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD4" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="5">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD5" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="6">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD6" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="7">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD7" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="8">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD8" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text="9">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="NUMPAD9" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOperations" text="=">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="ENTER" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOperations" text="+">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="ADD" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOperations" text="-">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="SUBTRACT" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOperations" text="*">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="MULTIPLY" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOperations" text="/">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="DIVIDE" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOperations" text="←">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="BACK_SPACE" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNumPad" text=".">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="PERIOD" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+              </menus>
+               <VBox.margin>
+                  <Insets top="-15.0" />
+               </VBox.margin>
+            </MenuBar>
+            <StackPane alignment="TOP_LEFT">
+               <children>
+                  <TextField fx:id="resultArea" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" prefHeight="42.0" prefWidth="259.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="lastEquationLabel" textFill="#686868">
+                     <StackPane.margin>
+                        <Insets left="5.0" top="2.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+            <GridPane alignment="CENTER" prefHeight="365.0" prefWidth="310.0" style="-fx-border-color: grey;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="bt0" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt1" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt2" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt3" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt4" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt5" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt6" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt7" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt8" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt9" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="btBack" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" styleClass="special" text="←" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <GridPane alignment="CENTER" GridPane.columnIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="31.0" minWidth="10.0" prefWidth="31.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.0" minWidth="10.0" prefWidth="33.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="lg" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </Button>
+                        <Button alignment="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="ex" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </Button>
+                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="cos" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </Button>
+                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="tan" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <Button fx:id="btSub" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" styleClass="operand" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="btDivide" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" styleClass="operand" text="/" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="btTimes" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" styleClass="operand" text="*" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="btAdd" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" styleClass="operand" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Button fx:id="btEquals" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" styleClass="special" text="=" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="bt01" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleNumPad" prefHeight="45.0" prefWidth="45.0" text="." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="btClean" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" text="C" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="btSub1" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="45.0" prefWidth="45.0" styleClass="operand" text="\%" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets top="-5.0" />
+         </padding>
+      </VBox>
+    </children>
+</AnchorPane>
