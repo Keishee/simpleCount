@@ -25,7 +25,6 @@ public class MainFrameController implements Initializable {
     private TextField resultArea;
     @FXML
     private Label lastEquationLabel;
-
     private String lastEquation;
     private boolean shouldClear = false;
     private DecimalFormat decimalFormat;
@@ -35,7 +34,7 @@ public class MainFrameController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         decimalFormat = new DecimalFormat("#.#");
-        decimalFormat.setMaximumFractionDigits(5);
+        decimalFormat.setMaximumFractionDigits(8);
     }
 
     /**
