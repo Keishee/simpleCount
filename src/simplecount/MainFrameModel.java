@@ -229,6 +229,15 @@ public class MainFrameModel extends Observable {
             case "tan":
                 result = Math.tan(number);
                 break;
+            case "sin":
+                result = Math.sin(number);
+                break;
+            case "v":
+                result = Math.sqrt(number);
+                break;
+            case "²":
+                result = Math.pow(number, 2);
+                break;
             default:
                 break;
         }

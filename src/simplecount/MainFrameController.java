@@ -36,6 +36,9 @@ public class MainFrameController implements Initializable, Observer {
         specialOps.add("ex");
         specialOps.add("cos");
         specialOps.add("tan");
+        specialOps.add("sin");
+        specialOps.add("v");
+        specialOps.add("²");
         model = new MainFrameModel();
         model.addObserver(this);
     }
@@ -88,6 +91,7 @@ public class MainFrameController implements Initializable, Observer {
             model.computeResult(resultArea.getText(), true);
         } else if ("C".equals(text)) {
             resultArea.clear();
+            lastEquationLabel.setText("");
         } else if (specialOps.contains(text)) {
             model.computeSpecialOperation(text, resultArea.getText());
         }
