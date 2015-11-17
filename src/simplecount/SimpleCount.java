@@ -17,14 +17,17 @@ import javafx.stage.Stage;
  * @author da-sil_l
  */
 public class SimpleCount extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainFrame.fxml"));
         Scene scene = new Scene(root);
 
-        stage.getIcons().add(new Image("/ressources/icon32.png"));
-        stage.getIcons().add(new Image("/ressources/icon16.png"));
+        try {
+            stage.getIcons().add(new Image("/ressources/icon32.png"));
+            stage.getIcons().add(new Image("/ressources/icon16.png"));
+        } catch (Exception e) {
+        }
         stage.setScene(scene);
         stage.setTitle("SimpleCount");
         stage.setResizable(false);
@@ -37,5 +40,5 @@ public class SimpleCount extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

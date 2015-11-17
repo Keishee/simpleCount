@@ -168,22 +168,22 @@
                         <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="lg" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="lg" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <padding>
                               <Insets bottom="3.0" />
                            </padding>
                         </Button>
-                        <Button alignment="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="ex" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Button alignment="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="ex" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <padding>
                               <Insets bottom="3.0" />
                            </padding>
                         </Button>
-                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="cos" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="cos" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                            <padding>
                               <Insets bottom="3.0" />
                            </padding>
                         </Button>
-                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleSpecialOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="tan" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleOperations" prefHeight="25.0" prefWidth="25.0" styleClass="logEx" text="tan" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <padding>
                               <Insets bottom="3.0" />
                            </padding>
